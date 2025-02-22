@@ -1,23 +1,39 @@
-My Offer Letter link: https://drive.google.com/file/d/1Du7FCjEhqQpKv2X6UJtyymE8t5-UTVye/view
+## Setup Instructions
 
-Result Super-Resolved Image: https://github.com/V-KennyPhilip/Samsung-Prism-Project/blob/main/super_resolved_image.png 
+# 1. **Upload Folders to Google Drive**
+To run the Python scripts on Google Colab, follow these steps to set up the necessary directories:
 
-Image Super Resolution <3
+- **Upload the following folders to your Google Drive:**
+  - **Colab Notebooks**
+  - **Set14_results**
+  - **srgan_output**
 
-Setup:
-If you want to run the python scripts on google colab, make sure you first upload the folders appearing in the screen shot "Google drive Screen Shot.png"
-Except for the folders "Colab Notebooks", "Set14_results" and "srgan_output", create the other folders
-After creating the folders, add images to each folder for training and testing process
+- **Create the following additional folders (if not already present):**
+  - Folder 1: `train_images`
+  - Folder 2: `test_images`
+  - Folder 3: `models`
+  - Folder 4: `results`
 
-All the python files need to be uploaded on google colab, manually
-Note: few files like .json will automatically be created, as well as the models(duhhh)
-The total number of epochs is dynamic, it is calculated based on a formula!!
+Ensure that the folder structure on your Google Drive mirrors the screenshot provided (`Google drive Screen Shot.png`).
 
-Evaluation:
-!python eval.py will evaluate the models and give us the PSNR and SSIM values
+# 2. **Upload Images**
+- **Training Folder (`train_images`)**: Upload your training images here.
+- **Testing Folder (`test_images`)**: Upload your testing images here.
 
-Results:
-!python super_resolve.py will perform the operation on the images present in one of the test folders(from drive), and also creates a "folder_resluts" file
+# 3. **Upload Python Scripts to Google Colab**
+All Python files need to be uploaded manually to Google Colab. You can do this by opening your Colab notebook, going to the Files tab, and uploading your scripts.
 
-Further work:
-The current output of images goes directly to the drive folder: need to output it on the running colab cell
+# 4. **Automatic Files**
+Some files, such as `.json` files and model files, will be automatically created during the training and evaluation processes.
+
+# 5. **Training Process**
+- The total number of epochs will be dynamically calculated based on a formula embedded in the script. You don't need to worry about manually setting the number of epochs.
+
+---
+
+## Evaluation
+
+After training the model, you can evaluate its performance using the following command:
+
+```bash
+!python eval.py
